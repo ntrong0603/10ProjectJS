@@ -10,3 +10,10 @@
 - Questions form obj
 - Select answer
 - At the en show core
+
+3. Recipe App
+
+- Design: https://www.uidesigndaily.com/posts/sketch-recipe-app-food-mobile-day-615
+- list of recipes
+- recipe info on click
+- fav recipe (w/ localStorage)
