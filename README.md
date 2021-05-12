@@ -1,3 +1,6 @@
+# 10 Javascript Project in 10 Hours
+## link tutorial https://www.youtube.com/watch?v=dtKciwk_si4&t=25s&ab_channel=FlorinPop
+
 1. Countdown Timer
 
 - Design: https://www.uidesigndaily.com/posts/sketch-countdown-timer-day-876
