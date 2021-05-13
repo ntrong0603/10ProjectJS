@@ -1,5 +1,5 @@
 # 10 Javascript Project in 10 Hours
-## link tutorial https://www.youtube.com/watch?v=dtKciwk_si4&t=25s&ab_channel=FlorinPop
+### link tutorial https://www.youtube.com/watch?v=dtKciwk_si4&t=25s&ab_channel=FlorinPop
 
 1. Countdown Timer
 
@@ -21,3 +21,10 @@
 - recipe info on click
 - fav recipe (w/ localStorage)
 - API data meal https://www.themealdb.com/api.php
+
+4. Notes app
+
+- Design: https://www.uidesigndaily.com/posts/photoshop-notes-widget-day-65
+- CRUD note
+- markdown (https://marked.js.org/)
+- localStorage
