@@ -49,6 +49,7 @@ function addNewNote(note = '')
 
     deleteBtn.addEventListener('click', () =>
     {
+        localStorage.setItem('notes', JSON.stringify(notes.filter(id => id !== textArea.value)));
         noteEl.remove();
     });
 
