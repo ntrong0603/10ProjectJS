@@ -1,36 +1,77 @@
 const form = document.getElementById('form');
 const input = document.getElementById('input');
-const todos = document.getElementById('todos');
+const todosUL = document.getElementById('todos');
+
+const todos = JSON.parse(localStorage.getItem('todos'));
+
+if (todos)
+{
+    todos.forEach(todo =>
+    {
+        addTodo(todo);
+    });
+}
 
 form.addEventListener('submit', (e) =>
 {
     e.preventDefault();
-    addTodo();
 
+    addTodo();
 });
 
-function addTodo()
+function addTodo(todo)
 {
-    const todoText = input.value;
+    let todoText = input.value;
+
+    if (todo)
+    {
+        todoText = todo.text;
+    }
 
     if (todoText)
     {
         const todoEl = document.createElement('li');
         todoEl.innerText = todoText;
+        if (todo && todo.completed)
+        {
+            todoEl.classList.add('completed');
+        }
 
         todoEl.addEventListener('click', () =>
         {
             todoEl.classList.toggle('completed');
+            updateLs();
+
         });
 
         todoEl.addEventListener('contextmenu', (e) =>
         {
             e.preventDefault();
             todoEl.remove();
+            updateLs();
         });
 
-        todos.appendChild(todoEl);
+        todosUL.appendChild(todoEl);
 
         input.value = "";
+        updateLs();
+
     }
+}
+
+function updateLs()
+{
+    const todosEl = document.querySelectorAll('li');
+
+    const todos = [];
+
+    todosEl.forEach(todoEl =>
+    {
+        todos.push({
+            text: todoEl.innerText,
+            completed: todoEl.classList.contains('completed')
+        })
+    });
+
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
