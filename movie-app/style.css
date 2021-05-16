@@ -49,6 +49,7 @@ main {
     margin: 1rem;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
 }
 
 .movie img {
@@ -87,4 +88,26 @@ main {
 
 .movie-info span.red {
     color: red;
+}
+
+.overview {
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h4 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
 }
